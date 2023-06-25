@@ -1,0 +1,60 @@
+.card{
+
+    margin-bottom: 112px;
+
+    @include pad{
+        margin-bottom: 72px;
+    }
+
+    @include mobile{
+        margin-bottom: 32px;
+    }
+
+    &-img{
+        width: 350px;
+        height: 224px;
+        object-fit: cover;
+
+        @include pad{
+            width: 330px;
+            height: 164px;
+        }
+    }
+
+    &-body{
+        margin-top: 1px;
+        font-family: $font-family-roboto;
+        font-size: 18px;
+        line-height: 24px;
+
+        @include pad{
+            display: flex;
+            justify-content: space-between;
+
+            font-size: 24px;
+            line-height: 36px;
+        }
+
+    }
+
+    &-title{
+        color: #000000;
+        margin-bottom: 8px;
+
+        @include pad{
+            margin-bottom: 0;
+        }
+    }
+
+    &-subtitle{
+        color: $color-primary;
+        font-weight: 600;
+        margin-bottom: 11px;
+
+        @include pad{
+            margin-bottom: 0;
+        }
+    }
+
+
+}

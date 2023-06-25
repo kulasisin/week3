@@ -1,0 +1,115 @@
+
+.cobrand{
+    background-image: url(/week4/images/bg.png);
+    height: 743px;
+    @include pad{
+        height: 437px;
+    }
+    @include mobile{
+        height: 696px;
+    }
+    @include background-image-normal;
+
+    padding-top: 64px;
+    padding-bottom: 80px;
+
+    @include pad{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    @include mobile{
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    &__title{
+        text-align: center;
+        color: white;
+        margin-bottom: 60px;
+
+        @include pad{
+            margin-bottom: 32px;
+        }
+
+        @include mobile{
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile{
+            flex-direction: column;
+        }
+    }
+
+    &__item{
+
+        $cobrand-imgs: '../images/product-8.png', '../images/product-9.png';
+
+        @each $img in $cobrand-imgs{
+            $i: index($cobrand-imgs, $img );
+            &:nth-child(#{$i}) .cobrand__link{
+                @include bg-images($img, 540px, 472px);
+                // opacity: 50%;
+                @include pad{
+                    @include bg-images($img, 330px, 280px);
+                }
+                @include mobile{
+                    @include bg-images($img, 345px, 284px);
+                }
+            }
+        }
+        position: relative;
+
+        @include mobile{
+            &:nth-child(1){
+                margin-bottom: 16px;
+            }
+        }
+
+    }
+
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        // filter: brightness(.8);
+        // filter: opacity(0.5);
+        // filter: grayscale(0.5);
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.5);
+            // transition: all 0.5s;
+        }
+
+        &:hover::before {
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+
+
+    }
+
+    &__series{
+        font-size: 72px;
+        color: #AA0601;
+        z-index: 1;
+
+        @include pad{
+            font-size: 32px;
+        }
+    }
+
+}

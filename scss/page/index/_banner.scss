@@ -1,0 +1,23 @@
+
+.banner{
+    background-image: url(../images/banner.png);
+    height: 840px;
+    @include background-image-normal;
+
+    @include pad{
+        background-image: url(../images/banner-sm.png);
+    }
+
+    @include mobile{
+        height: 394px;
+    }
+
+    .container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+}

@@ -1,0 +1,67 @@
+.pagination{
+    display: none;
+
+    @include pad{
+        display: block;
+    }
+
+    @include mobile{
+        display: block;
+    }
+
+    &__list{
+        display: flex;
+        justify-content: center;
+        margin-top: 33px;
+
+        @include mobile{
+            margin-top: 8px;
+        }
+    }
+
+    &__item{
+        border: 1px solid #555555;
+        font-size: 18px;
+
+        &:first-child .pagination__link{
+            font-size: 19px;
+            line-height: 26px;
+
+            @include mobile{
+                font-size: 12px;
+                line-height: 17px;
+            }
+        }
+        &:last-child .pagination__link{
+            font-size: 19px;
+            line-height: 26px;
+
+            @include mobile{
+                font-size: 12px;
+                line-height: 17px;
+            }
+        }
+
+        @include mobile{
+            font-size: 12px;
+        }
+    }
+
+    &__link{
+        text-decoration: none;
+        color: #555555;
+        font-family: $font-family-roboto;
+        display: block;
+        padding: 14px 16px;
+
+        &--active{
+            background-color: #000000;
+            color: white;
+        }
+
+        @include mobile{
+            padding: 8px 10px;
+        }
+    }
+
+}

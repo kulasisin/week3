@@ -1,0 +1,230 @@
+.footer{
+
+    &__infor{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+
+        @include mobile{
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__nav-list{
+        display: flex;
+
+        @include mobile{
+            display: none;
+        }
+    }
+
+    &__nav-link{
+        display: block;
+        font-size: $font-size-m;
+        color: #ffffff;
+        text-decoration: none;
+        padding-right: 48px;
+        padding-top: 48px;
+        padding-bottom: 36px;
+        transition: all 0.5s;
+        &:hover{
+            color: lightgray;
+        }
+
+        @include pad{
+            padding-top: 40px;
+            padding-bottom: 26px;
+            padding-right: 40px;
+            font-size: $font-size-base;
+        }
+    }
+
+    &__social-list{
+        display: flex;
+    }
+
+    &__social-link{
+        display: block;
+        padding-left: 32px;
+        padding-top: 36px;
+
+        @include pad{
+            padding-top: 40px;
+            padding-left: 24px;
+            img{
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        @include mobile{
+            padding-top: 24px;
+        }
+
+        @include x-mobile{
+            padding-left: 18px;
+            img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &__contact-list{
+        @include mobile{
+            margin-top: 24px;
+        }
+    }
+
+    &__contact-item{
+
+        &:nth-child(1) img{
+            width: 44px;
+            height: 44px;
+            margin-right: 17px;
+
+            @include pad{
+                width: 24px;
+                height: 24px;
+                margin-right: 12px;
+            }
+
+            @include mobile{
+                width: 20px;
+                height: 20px;
+                margin-right: 4px;
+            }
+        }
+
+        &:nth-child(2) img{
+            width: 48px;
+            height: 48px;
+            margin-right: 12px;
+
+            @include pad{
+                width: 32px;
+                height: 32px;
+                margin-right: 8px;
+            }
+
+            @include mobile{
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &__contact-link{
+        display: flex;
+        align-items: center;
+        font-size: $font-size-base*2.25;
+        text-decoration: none;
+        color: #ffffff;
+        padding-bottom: 19px;
+
+        @include pad{
+            font-size: $font-size-m;
+            padding-bottom: 8px;
+        }
+
+        @include mobile{
+            font-size: $font-size-base;
+        }
+
+        @include x-mobile{
+            font-size: $font-size-x-sm;
+        }
+    }
+
+    &__legal{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 28px;
+
+        @include pad{
+            padding-bottom: 40px;
+        }
+
+        @include mobile{
+            flex-direction: column;
+            align-items: start;
+            padding-bottom: 25px;
+        }
+    }
+
+    &__copyright{
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        font-size: $font-family-base;
+
+        p{
+            margin-left: 38px;
+
+            @include mobile{
+                font-size: $font-size-x-sm;
+            }
+        }
+
+        @include pad{
+            .logo{
+                display: none;
+            }
+            p{
+                margin: 0;
+            }
+        }
+    }
+
+    &__policy-list{
+        display: flex;
+
+        @include mobile{
+            flex-direction: column;
+            width: 100%;
+
+        }
+    }
+
+    &__policy-item:nth-last-child(1){
+
+        @include mobile{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo{
+            display: none;
+
+            @include mobile{
+                display: block;
+                width: 46px;
+                height: 28px;
+                background-size: cover;
+            }
+        }
+    }
+
+    &__policy-link{
+        text-decoration: none;
+        color: #fff;
+        font-size: $font-size-x-sm;
+        padding-left: 62px;
+
+        @include pad{
+            padding-left: 24px;
+        }
+
+        @include mobile{
+            padding-left: 0;
+            padding-top: 8px;
+        }
+    }
+
+
+}
