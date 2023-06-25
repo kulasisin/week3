@@ -1,0 +1,46 @@
+// commonly used
+@mixin u-hide-text {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin background-image-normal {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+// project
+@mixin  serisesClassisc-before($url, $height, $weight){
+    &::before{
+        content: '';
+        height: $height;
+        width: $weight;
+        display: inline-block;
+        background-image: url($url);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 8px;
+        vertical-align: text-top;
+        @content;
+    }
+}
+
+@mixin  link-hover {
+    &:hover{
+        transition: all 0.5s;
+        opacity: 0.7;
+    }
+
+}
+
+@mixin bg-images($url, $width, $height){
+    background-image: url($url);
+    width: $width;
+    height: $height;
+    @include background-image-normal;
+    @content;
+}

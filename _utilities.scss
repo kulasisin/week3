@@ -1,0 +1,117 @@
+// spacing related
+@for $i from 1 through 10 {
+  .mb-#{$i} {
+    margin-bottom: 8px * $i;
+  }
+}
+@include pad{
+  @for $i from 1 through 10 {
+    .mb-md-#{$i} {
+      margin-bottom: 4px * $i;
+    }
+  }
+}
+
+
+@for $i from 1 through 8 {
+  .pl-#{$i} {
+    padding-left: 8px * $i;
+  }
+}
+
+@include pad{
+  @for $i from 1 through 8 {
+    .pl-md-#{$i} {
+      padding-left: 8px * $i;
+    }
+  }
+}
+
+@for $i from 1 through 8 {
+  .pt-#{$i} {
+    padding-top: 8px * $i;
+  }
+}
+
+@include pad{
+  @for $i from 1 through 8 {
+    .pt-md-#{$i} {
+      padding-top: 8px * $i;
+    }
+  }
+}
+
+@include mobile{
+  @for $i from 1 through 8 {
+    .pt-sm-#{$i} {
+      padding-top: 4px * $i;
+    }
+  }
+}
+
+@for $i from 1 through 8 {
+  .pb-#{$i} {
+    padding-bottom: 8px * $i;
+  }
+}
+
+@include pad{
+  @for $i from 1 through 8 {
+    .pb-md-#{$i} {
+      padding-bottom: 8px * $i;
+    }
+  }
+}
+
+@include mobile{
+  @for $i from 1 through 8 {
+    .pb-sm-#{$i} {
+      padding-bottom: 4px * $i;
+    }
+  }
+}
+
+// color
+.bg-primary{
+  background: $color-primary;
+}
+
+.bg-primary-light{
+  background: $color-primary-light;
+}
+
+.txt-primary-dark{
+  color: $color-primary-dark;
+}
+
+.txt-primary{
+  color: $color-primary;
+}
+
+.txt-color-dark{
+  color: $text-color-dark;
+}
+
+.txt-color-light{
+  color: $text-color-light;
+}
+
+.txt-color{
+  color: $text-color;
+}
+
+// font family
+.font-roboto{
+  font-family: $font-family-roboto;
+}
+
+.font-style-italic{
+  font-style: italic;
+}
+
+// font weight
+@for $i from 1 through 9 {
+  .fw-#{$i} {
+    font-weight: 100 * $i;
+  }
+}
